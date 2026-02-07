@@ -7,17 +7,18 @@ import { NFTBeneficiary } from "@/components/dashboard/NFTBeneficiary";
 
 export default function DashboardPage() {
     return (
-        <div className="container mx-auto px-4 py-8 space-y-8 max-w-6xl">
+        <div className="container mx-auto px-4 py-8 space-y-8 max-w-7xl">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
-                    <h1 className="text-3xl font-bold">My Dashboard</h1>
-                    <p className="text-muted-foreground">Monitor your assets and legacy status.</p>
+                    <h1 className="text-4xl font-bold">My Dashboard</h1>
+                    <p className="text-muted-foreground mt-2">Monitor your assets and legacy status.</p>
                 </div>
                 <div className="w-full md:w-auto">
                     <ActiveVault />
                 </div>
             </div>
 
+            {/* Top Row: Lazy Timer and Wealth Growth */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[500px]">
                 {/* Lazy Timer - Takes up prominent space */}
                 <div className="md:col-span-4 h-full">
@@ -35,11 +36,12 @@ export default function DashboardPage() {
                     <div className="h-auto md:h-[180px]">
                         <LegacyPlan />
                     </div>
-                    {/* NFT Beneficiary Details */}
-                    <div className="h-auto md:h-[220px]">
-                        <NFTBeneficiary />
-                    </div>
                 </div>
+            </div>
+
+            {/* NFT Beneficiary Gallery - Full Width */}
+            <div>
+                <NFTBeneficiary />
             </div>
         </div>
     );
