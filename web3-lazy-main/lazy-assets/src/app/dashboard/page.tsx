@@ -7,8 +7,9 @@ import { NFTBeneficiary } from "@/components/dashboard/NFTBeneficiary";
 
 export default function DashboardPage() {
     return (
-        <div className="container mx-auto px-4 py-8 space-y-8 max-w-7xl">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div className="container mx-auto px-4 py-12 space-y-12 max-w-7xl">
+            {/* Header Section */}
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6 border-b border-gray-200">
                 <div>
                     <h1 className="text-4xl font-bold">My Dashboard</h1>
                     <p className="text-muted-foreground mt-2">Monitor your assets and legacy status.</p>
@@ -18,31 +19,35 @@ export default function DashboardPage() {
                 </div>
             </div>
 
-            {/* Top Row: Lazy Timer and Wealth Growth */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[500px]">
-                {/* Lazy Timer - Takes up prominent space */}
-                <div className="md:col-span-4 h-full">
-                    <LazyTimer />
-                </div>
-
-                {/* Right Column Grid */}
-                <div className="md:col-span-8 flex flex-col gap-6 h-full">
-                    {/* Wealth Growth Chart */}
-                    <div className="flex-1 min-h-[300px]">
-                        <WealthGrowth />
+            {/* Section 1: Lazy Timer and Wealth Growth */}
+            <section className="space-y-6">
+                <h2 className="text-2xl font-semibold text-gray-900">Activity & Growth</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    {/* Lazy Timer - Left side */}
+                    <div className="lg:col-span-5">
+                        <LazyTimer />
                     </div>
 
-                    {/* Legacy Plan Details */}
-                    <div className="h-auto md:h-[180px]">
-                        <LegacyPlan />
+                    {/* Right Column */}
+                    <div className="lg:col-span-7 space-y-6">
+                        {/* Wealth Growth Chart */}
+                        <div>
+                            <WealthGrowth />
+                        </div>
+
+                        {/* Legacy Plan Details */}
+                        <div>
+                            <LegacyPlan />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            {/* NFT Beneficiary Gallery - Full Width */}
-            <div>
+            {/* Section 2: NFT Beneficiary Gallery */}
+            <section className="space-y-6 pt-6 border-t border-gray-200">
+                <h2 className="text-2xl font-semibold text-gray-900">NFT Assets</h2>
                 <NFTBeneficiary />
-            </div>
+            </section>
         </div>
     );
 }

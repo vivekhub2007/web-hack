@@ -22,13 +22,13 @@ export function LegacyPlan() {
     };
 
     return (
-        <Card className="h-full border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50 transition-all duration-300">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <Card className="border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50 transition-all duration-300">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
                 <CardTitle className="text-blue-800 text-lg">Legacy Plan</CardTitle>
                 <Lock className="h-4 w-4 text-blue-600" />
             </CardHeader>
-            <CardContent className="space-y-4 pt-4">
-                <div className="space-y-1">
+            <CardContent className="space-y-5\">
+                <div className="space-y-2\">
                     <label className="text-xs font-semibold uppercase tracking-wider text-blue-900/60">Beneficiary Wallet</label>
                     {isEditing ? (
                         <Input
@@ -37,14 +37,14 @@ export function LegacyPlan() {
                             className="bg-white/80 border-blue-200 text-blue-900"
                         />
                     ) : (
-                        <div className="flex items-center space-x-2 bg-white/60 p-2 rounded-lg border border-blue-100">
+                        <div className=\"flex items-center space-x-2 bg-white/60 p-3 rounded-lg border border-blue-100\">
                             <div className="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full h-6 w-6 shrink-0"></div>
                             <span className="text-sm font-mono truncate w-full text-blue-900">{wallet}</span>
                         </div>
                     )}
                 </div>
 
-                <div className="space-y-1">
+                <div className="space-y-2\">
                     <label className="text-xs font-semibold uppercase tracking-wider text-blue-900/60">Inactivity Period</label>
                     {isEditing ? (
                         <div className="flex items-center gap-2">
@@ -57,13 +57,13 @@ export function LegacyPlan() {
                             <span className="text-sm text-blue-800 font-medium">Days</span>
                         </div>
                     ) : (
-                        <div className="bg-white/60 p-2 rounded-lg border border-blue-100 flex justify-between items-center">
+                        <div className=\"bg-white/60 p-3 rounded-lg border border-blue-100 flex justify-between items-center\">
                             <span className="text-sm font-bold text-blue-900">{days} Days</span>
                         </div>
                     )}
                 </div>
 
-                <div className="pt-2">
+                <div className="pt-4">
                     {isEditing ? (
                         <div className="flex gap-2">
                             <Button onClick={handleSave} size="sm" className="w-full bg-blue-600 hover:bg-blue-700 text-white">

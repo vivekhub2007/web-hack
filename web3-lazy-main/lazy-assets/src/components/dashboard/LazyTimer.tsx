@@ -18,8 +18,8 @@ export function LazyTimer() {
     };
 
     return (
-        <Card className="h-full relative overflow-hidden bg-gradient-to-br from-red-50 to-orange-50 border-orange-100">
-            <CardContent className="flex flex-col items-center justify-center h-full p-6 space-y-6">
+        <Card className="relative overflow-hidden bg-gradient-to-br from-red-50 to-orange-50 border-orange-100">
+            <CardContent className="flex flex-col items-center justify-center p-8 space-y-6">
                 <h3 className="text-lg font-semibold text-orange-900 tracking-wide">LAZY TIMER</h3>
 
                 <div className="relative w-48 h-48 flex items-center justify-center">

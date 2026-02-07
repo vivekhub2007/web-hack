@@ -45,8 +45,8 @@ export function NFTBeneficiary() {
 
     return (
         <>
-            <Card className="h-full border-purple-100 bg-gradient-to-br from-purple-50 to-fuchsia-50 transition-all duration-300">
-                <CardHeader className="pb-4">
+            <Card className="border-purple-100 bg-gradient-to-br from-purple-50 to-fuchsia-50 transition-all duration-300\">
+                <CardHeader className="pb-6 space-y-0">
                     <div className="flex flex-row items-center justify-between space-y-0">
                         <div className="space-y-1">
                             <CardTitle className="text-purple-800 text-lg">NFT Beneficiary</CardTitle>
@@ -55,7 +55,7 @@ export function NFTBeneficiary() {
                         <LucideImage className="h-5 w-5 text-purple-600" />
                     </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-6">
                     {mockNFTs.length === 0 ? (
                         <div className="flex flex-col items-center justify-center py-12 text-center">
                             <LucideImage className="h-12 w-12 text-purple-300 mb-4" />
@@ -63,7 +63,7 @@ export function NFTBeneficiary() {
                             <p className="text-xs text-purple-500">NFTs from the beneficiary wallet will appear here</p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                             {mockNFTs.map((nft) => (
                                 <motion.button
                                     key={nft.id}

@@ -38,8 +38,8 @@ export function WealthGrowth() {
     const yieldEarned = (lastValue - 1.0).toFixed(4);
 
     return (
-        <Card className="h-full border-green-100 bg-gradient-to-br from-green-50 to-emerald-50">
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
+        <Card className="border-green-100 bg-gradient-to-br from-green-50 to-emerald-50">
+            <CardHeader className="flex flex-row items-center justify-between pb-6 space-y-0">
                 <div className="space-y-1">
                     <CardTitle className="text-green-800">Wealth Growth</CardTitle>
                     <CardDescription>Projected growth via Aave v3 APY</CardDescription>
@@ -59,8 +59,8 @@ export function WealthGrowth() {
                     ))}
                 </div>
             </CardHeader>
-            <CardContent>
-                <div className="h-[200px] w-full">
+            <CardContent className="space-y-6">
+                <div className="h-[250px] w-full">
                     <ResponsiveContainer width="100%" height="100%">
                         <AreaChart
                             data={currentData}
@@ -83,7 +83,7 @@ export function WealthGrowth() {
                         </AreaChart>
                     </ResponsiveContainer>
                 </div>
-                <div className="mt-4 flex items-center justify-between">
+                <div className="flex items-center justify-between">
                     <div>
                         <p className="text-xs text-muted-foreground">Principal</p>
                         <p className="text-lg font-bold">1.0000 ETH</p>
