@@ -1,7 +1,9 @@
+
 import { ActiveVault } from "@/components/dashboard/ActiveVault";
 import { LazyTimer } from "@/components/dashboard/LazyTimer";
 import { WealthGrowth } from "@/components/dashboard/WealthGrowth";
 import { LegacyPlan } from "@/components/dashboard/LegacyPlan";
+import { NFTBeneficiary } from "@/components/dashboard/NFTBeneficiary";
 
 export default function DashboardPage() {
     return (
@@ -32,6 +34,10 @@ export default function DashboardPage() {
                     {/* Legacy Plan Details */}
                     <div className="h-auto md:h-[180px]">
                         <LegacyPlan />
+                    </div>
+                    {/* NFT Beneficiary Details */}
+                    <div className="h-auto md:h-[220px]">
+                        <NFTBeneficiary />
                     </div>
                 </div>
             </div>
