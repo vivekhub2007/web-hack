@@ -61,7 +61,7 @@ export function WealthGrowth() {
             </CardHeader>
             <CardContent className="space-y-6">
                 <div className="h-[250px] w-full">
-                    <ResponsiveContainer width="100%" height="100%">
+                    <ResponsiveContainer width="100%" height={250}>
                         <AreaChart
                             data={currentData}
                             margin={{ top: 10, right: 0, left: -20, bottom: 0 }}
