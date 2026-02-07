@@ -24,9 +24,10 @@ const { wallets } = getDefaultWallets();
 
 // Using a public Project ID for demo purposes. In production, use your own from WalletConnect Cloud.
 // Project ID is required for WalletConnect.
+// Note: Update the origin on cloud.reown.com to match your deployment URL
 const config = getDefaultConfig({
     appName: "Lazy Assets",
-    projectId: "YOUR_PROJECT_ID", // Replace with env variable in production
+    projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_ID || "YOUR_PROJECT_ID", // Replace with env variable in production
     wallets: [
         ...wallets,
         {

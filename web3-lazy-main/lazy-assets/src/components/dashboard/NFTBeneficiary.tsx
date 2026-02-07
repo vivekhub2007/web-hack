@@ -72,16 +72,12 @@ export function NFTBeneficiary() {
                                     whileTap={{ scale: 0.98 }}
                                     className="group relative overflow-hidden rounded-xl border-2 border-purple-200 bg-white/80 shadow-sm hover:shadow-lg hover:border-purple-400 transition-all duration-300 text-left"
                                 >
-                                    <div className="aspect-square bg-gradient-to-br from-purple-200 to-fuchsia-200 flex items-center justify-center overflow-hidden">
+                                    <div className="aspect-square bg-gradient-to-br from-purple-200 to-fuchsia-200 overflow-hidden">
                                         <div className="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-300"
                                             style={{
                                                 backgroundImage: `url('${nft.image}')`,
                                             }}
                                         >
-                                            {/* Placeholder Image */}
-                                            <div className="w-full h-full bg-gradient-to-br from-purple-400/20 to-fuchsia-400/20 flex items-center justify-center">
-                                                <LucideImage className="h-8 w-8 text-purple-400" />
-                                            </div>
                                         </div>
                                     </div>
                                     <div className="p-3 space-y-1">
@@ -127,15 +123,12 @@ export function NFTBeneficiary() {
                             </div>
 
                             {/* NFT Image */}
-                            <div className="w-full aspect-square bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                            <div className="w-full aspect-square bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-xl mb-4 overflow-hidden">
                                 <div className="w-full h-full bg-cover bg-center"
                                     style={{
                                         backgroundImage: `url('${selectedNFT.image}')`,
                                     }}
                                 >
-                                    <div className="w-full h-full bg-gradient-to-br from-purple-400/20 to-fuchsia-400/20 flex items-center justify-center">
-                                        <LucideImage className="h-12 w-12 text-purple-400" />
-                                    </div>
                                 </div>
                             </div>
 
